@@ -2,4 +2,7 @@ apm_packages
 ane
 project-lock.apm
 out
+bin
+.idea
+cert
 assets
