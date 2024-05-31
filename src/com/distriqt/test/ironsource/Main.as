@@ -16,6 +16,9 @@
  */
 package com.distriqt.test.ironsource
 {
+	import com.distriqt.extension.core.Core;
+	import com.distriqt.test.idfa.IDFATests;
+
 	import feathers.controls.Button;
 	import feathers.controls.ScrollContainer;
 	import feathers.layout.HorizontalAlign;
@@ -44,6 +47,7 @@ package com.distriqt.test.ironsource
 		//
 		
 		private var _tests		: IronSourceTests;
+		private var _idfa   : IDFATests;
 		
 		private var _text		: TextField;
 		private var _container	: ScrollContainer ;
@@ -94,21 +98,7 @@ package com.distriqt.test.ironsource
 			_container.layout = layout;
 			_container.width = stage.stageWidth;
 			_container.height = stage.stageHeight-40;
-			
-			
-			_tests = new IronSourceTests( this );
 
-			addAction( "Advertising Id", _tests.getAdvertisingId );
-			addAction( "Show :Rewarded Video", _tests.showRewardedVideo );
-			addAction( "Load :Interstitial", _tests.loadInterstitial );
-			addAction( "Show :Interstitial", _tests.showInterstitial );
-			
-			addAction( "Load :Banner", _tests.loadBanner );
-			addAction( "Display :Banner", _tests.displayBanner );
-			addAction( "Hide :Banner", _tests.hideBanner );
-			addAction( "Destroy :Banner", _tests.destroyBanner );
-			
-			addChild( _tests );
 			addChild( _text );
 			addChild( _container );
 		}
@@ -121,8 +111,34 @@ package com.distriqt.test.ironsource
 			b.addEventListener( starling.events.Event.TRIGGERED, listener );
 			_container.addChild(b);
 		}
-		
-		
+
+		private function init():void
+		{
+			Core.init();
+			log("Core", "init.");
+
+			_idfa = new IDFATests(this);
+			_idfa.requestAuthorisation();
+
+		}
+
+		private function createIronSource():void
+		{
+			_tests = new IronSourceTests( this );
+
+			addAction( "Advertising Id", _tests.getAdvertisingId );
+			addAction( "Show :Rewarded Video", _tests.showRewardedVideo );
+			addAction( "Load :Interstitial", _tests.loadInterstitial );
+			addAction( "Show :Interstitial", _tests.showInterstitial );
+
+			addAction( "Load :Banner", _tests.loadBanner );
+			addAction( "Display :Banner", _tests.displayBanner );
+			addAction( "Hide :Banner", _tests.hideBanner );
+			addAction( "Destroy :Banner", _tests.destroyBanner );
+
+			addChild( _tests );
+		}
+
 		
 		////////////////////////////////////////////////////////
 		//	EVENT HANDLERS
@@ -133,8 +149,8 @@ package com.distriqt.test.ironsource
 			removeEventListener(Event.ADDED_TO_STAGE, addedToStageHandler );
 			new MetalWorksMobileTheme();
 			createUI();
+			init ();
+			createIronSource();
 		}
-		
-		
 	}
 }

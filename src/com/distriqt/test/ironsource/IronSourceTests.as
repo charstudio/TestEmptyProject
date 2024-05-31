@@ -20,6 +20,7 @@ package com.distriqt.test.ironsource
 	import com.distriqt.extension.ironsource.events.InterstitialAdEvent;
 	import com.distriqt.extension.ironsource.events.OfferwallEvent;
 	import com.distriqt.extension.ironsource.events.RewardedVideoAdEvent;
+	import com.distriqt.extension.ironsource.facebookaudience.FacebookAudience;
 
 	import starling.display.Sprite;
 
@@ -86,22 +87,17 @@ package com.distriqt.test.ironsource
 					IronSource.instance.addEventListener( BannerAdEvent.SCREEN_DISMISSED, bannerHandler );
 					IronSource.instance.addEventListener( BannerAdEvent.LEFT_APPLICATION, bannerHandler );
 
-					IronSource.instance.addEventListener( OfferwallEvent.AVAILABLE, offerwallHandler );
-					IronSource.instance.addEventListener( OfferwallEvent.SHOW_FAILED, offerwallErrorHandler );
-					IronSource.instance.addEventListener( OfferwallEvent.OPENED, offerwallHandler );
-					IronSource.instance.addEventListener( OfferwallEvent.CLOSED, offerwallHandler );
-					IronSource.instance.addEventListener( OfferwallEvent.AD_CREDITED, adCreditedHandler );
-					IronSource.instance.addEventListener( OfferwallEvent.GETOFFERWALLCREDITS_FAILED,
-														  offerwallErrorHandler );
-
 
 					IronSource.instance.init( Config.IRONSRC_APP_KEY, [
 						IronSource.BANNER,
 						IronSource.REWARDED_VIDEO,
-						IronSource.INTERSTITIAL,
-						IronSource.OFFERWALL
+						IronSource.INTERSTITIAL
 					] );
 
+					IronSource.instance.setAdaptersDebug(true);
+					IronSource.instance.setConsent(true);
+					IronSource.instance.registerAppForAdNetworkAttribution();
+					FacebookAudience.instance.adSettings.setAdvertiserTrackingEnabled(true);
 					IronSource.instance.validateIntegration();
 
 					log( "IronSource Version:        " + IronSource.instance.version );
