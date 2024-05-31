@@ -79,8 +79,8 @@
             "id": "com.distriqt.ironsource.FacebookAudience"
         },
         {
-            "version": "4.8.0",
-            "id": "com.distriqt.MediaPlayer"
+            "version": "7.2.8",
+            "id": "com.distriqt.NativeWebView"
         },
         {
             "version": "4.1.0",
