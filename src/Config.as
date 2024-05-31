@@ -27,7 +27,7 @@ package
 		//	VARIABLES
 		//
 		
-		public static var IRONSRC_APP_KEY		: String = "XXXXXXX";
+		public static var IRONSRC_APP_KEY		: String = "a4c856f5";
 		
 		public static var scale : Number = 1;
 		
