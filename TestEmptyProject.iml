@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="Flex" version="4">
+  <component name="FlexBuildConfigurationManager" active="TestEmptyProject">
+    <configurations>
+      <configuration name="TestEmptyProject" target-platform="Mobile" pure-as="true" main-class="TestIronSource" output-file="TestEmptyProject.swf" output-folder="$MODULE_DIR$/out/production/TestEmptyProject">
+        <dependencies target-player="32.0">
+          <entries>
+            <entry library-name="libs" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+            <entry library-name="ane" library-level="project">
+              <dependency linkage="Merged" />
+            </entry>
+          </entries>
+          <sdk name="AIR_SDK_50.2.4.5" />
+        </dependencies>
+        <compiler-options />
+        <packaging-air-desktop />
+        <packaging-android package-file-name="TestEmptyProject" />
+        <packaging-ios enabled="true" use-generated-descriptor="false" custom-descriptor-path="$MODULE_DIR$/src/TestIronSource-app.xml" package-file-name="TestEmptyProject">
+          <AirSigningOptions keystore-path="$MODULE_DIR$/cert/sboiko_alt/AlexandrBoiko.p12" provisioning-profile-path="$MODULE_DIR$/cert/sboiko_alt/dev_christmas_sweeper_3.mobileprovision" />
+        </packaging-ios>
+      </configuration>
+    </configurations>
+    <compiler-options />
+  </component>
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="jdk" jdkName="AIR_SDK_50.2.4.5" jdkType="Flex SDK Type (new)" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" exported="" name="libs" level="project" />
+    <orderEntry type="library" exported="" name="ane" level="project" />
+  </component>
+</module>

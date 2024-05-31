@@ -33,6 +33,7 @@ package
 	/**	
 	 * Sample application for using the IronSource Native Extension
 	 */
+	[SWF(width="768", height="1024", frameRate="60", backgroundColor="#000000")]
 	public class TestIronSource extends Sprite
 	{
 		////////////////////////////////////////////////////////
@@ -88,6 +89,7 @@ package
 			this._starling.enableErrorChecking = false;
 			this._starling.skipUnchangedFrames = false;
 			this._starling.supportHighResolutions = true;
+			this._starling.showStats = true;
 			this._starling.start();
 			
 			this._scaler = new ScreenDensityScaleFactorManager(this._starling);

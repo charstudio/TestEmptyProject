@@ -1,15 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <application xmlns="http://ns.adobe.com/air/application/50.2">
-    <id>com.distriqt.test</id>
+    <id>com.sboiko.christmassweeper3</id>
     <filename>TestIronSource</filename>
     <name>TestIronSource</name>
     <versionNumber>0.0.1</versionNumber>
 
     <initialWindow>
         <content>[This value will be overwritten by Flash Builder in the output app.xml]</content>
-        <autoOrients>true</autoOrients>
-        <fullScreen>false</fullScreen>
+        <systemChrome>standard</systemChrome>
+        <transparent>false</transparent>
         <visible>true</visible>
+        <fullScreen>true</fullScreen>
+        <autoOrients>true</autoOrients>
+        <aspectRatio>portrait</aspectRatio>
         <renderMode>direct</renderMode>
     </initialWindow>
 
@@ -27,90 +30,206 @@
     </icon>
 
     <iPhone>
-        <InfoAdditions><![CDATA[
-            <key>UIDeviceFamily</key>
-            <array>
-                <string>1</string>
-                <string>2</string>
-            </array>
-
-
-            <key>SKAdNetworkItems</key>
-            <array>
-               <dict>
-                   <key>SKAdNetworkIdentifier</key>
-                   <string>SU67R6K2V3.skadnetwork</string>
-               </dict>
-            </array>
-
-            <key>NSAppTransportSecurity</key>
-            <dict>
-                <key>NSAllowsArbitraryLoads</key>
-                <true/>
-            </dict>
-
-            <key>MinimumOSVersion</key>
-            <string>12.0</string>
-
-            <key>UILaunchStoryboardName</key>
-            <string>LaunchScreen</string>
-
-        ]]></InfoAdditions>
         <requestedDisplayResolution>high</requestedDisplayResolution>
-        <Entitlements>
-            <![CDATA[
-            ]]>
-        </Entitlements>
+        <InfoAdditions><![CDATA[
+<key>MinimumOSVersion</key>
+<string>12.0</string>
+<key>CFBundleURLTypes</key>
+<array>
+  <dict>
+    <key>CFBundleURLSchemes</key>
+    <array>
+      <string>fb3440899555990537</string>
+    </array>
+  </dict>
+</array>
+<key>FacebookAppID</key>
+<string>3440899555990537</string>
+<key>FacebookClientToken</key>
+<string>9e0ecfdbbe0d9ef99a5df0c54aea7857</string>
+<key>FacebookDisplayName</key>
+<string>ChristmasSweeper3</string>
+<!-- OPTIONAL SETTINGS -->
+<key>FacebookAutoInitEnabled</key>
+<false/>
+<key>FacebookAutoLogAppEventsEnabled</key>
+<true/>
+<key>FacebookAdvertiserIDCollectionEnabled</key>
+<true/>
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSExceptionDomains</key>
+  <dict>
+    <key>facebook.com</key>
+    <dict>
+      <key>NSIncludesSubdomains</key>
+      <true/>
+      <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+      <false/>
+    </dict>
+    <key>fbcdn.net</key>
+    <dict>
+      <key>NSIncludesSubdomains</key>
+      <true/>
+      <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+      <false/>
+    </dict>
+    <key>akamaihd.net</key>
+    <dict>
+      <key>NSIncludesSubdomains</key>
+      <true/>
+      <key>NSThirdPartyExceptionRequiresForwardSecrecy</key>
+      <false/>
+    </dict>
+  </dict>
+  <key>NSAllowsArbitraryLoads</key>
+  <true/>
+</dict>
+<!-- Required to check availability and communicate with other Facebook applications -->
+<key>LSApplicationQueriesSchemes</key>
+<array>
+  <string>fb</string>
+  <string>fbapi</string>
+  <string>fbapi20130214</string>
+  <string>fbapi20130410</string>
+  <string>fbapi20130702</string>
+  <string>fbapi20131010</string>
+  <string>fbapi20131219</string>
+  <string>fbapi20140410</string>
+  <string>fbapi20140116</string>
+  <string>fbapi20150313</string>
+  <string>fbapi20150629</string>
+  <string>fbapi20160328</string>
+  <string>fbauth</string>
+  <string>fb-messenger-share-api</string>
+  <string>fbauth2</string>
+  <string>fbshareextension</string>
+  <string>cydia</string>
+</array>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Access to photo library is required to save images and videos.</string>
+<key>NSPhotoLibraryAddUsageDescription</key>
+<string>Access to photo library is required to save images and videos.</string>
+<key>FirebaseAppDelegateProxyEnabled</key>
+<false/>
+<key>FirebaseAutomaticScreenReportingEnabled</key>
+<false/>
+<key>FirebaseCrashlyticsCollectionEnabled</key>
+<false/>
+<key>NSUserTrackingUsageDescription</key>
+<string>Allows us to deliver personalized ads for you.</string>
+<!-- iOS 14 AdNetwork -->
+<key>SKAdNetworkItems</key>
+<array>
+  <dict>
+    <key>SKAdNetworkIdentifier</key>
+    <string>su67r6k2v3.skadnetwork</string>
+  </dict>
+  <dict>
+    <!-- AdMob -->
+    <key>SKAdNetworkIdentifier</key>
+    <string>cstr6suwn9.skadnetwork</string>
+  </dict>
+  <dict>
+    <!-- AppLovin -->
+    <key>SKAdNetworkIdentifier</key>
+    <string>ludvb6z3bs.skadnetwork</string>
+  </dict>
+  <dict>
+    <!-- Facebook -->
+    <key>SKAdNetworkIdentifier</key>
+    <string>v9wttpbfk9.skadnetwork</string>
+  </dict>
+  <dict>
+    <!-- Facebook -->
+    <key>SKAdNetworkIdentifier</key>
+    <string>n38lu8286q.skadnetwork</string>
+  </dict>
+</array>
+<key>NSAdvertisingAttributionReportEndpoint</key>
+<string>https://postbacks-is.com</string>
+<key>GADApplicationIdentifier</key>
+<string>ca-app-pub-4216099470194209~4523531865</string>
+<!-- iOS 14 AdNetwork -->
+<!-- iOS 14 AdNetwork -->
+<!-- iOS 14 AdNetwork -->
+<key>UIBackgroundModes</key>
+<array>
+  <string>remote-notification</string>
+</array>]]></InfoAdditions>
+        <Entitlements><![CDATA[
+<key>com.apple.developer.applesignin</key>
+<array>
+  <string>Default</string>
+</array>
+<key>get-task-allow</key>
+<true/>
+<key>aps-environment</key>
+<string>development</string>
+<key>application-identifier</key>
+<string>56434KSQ43.com.sboiko.christmassweeper3</string>
+<key>keychain-access-groups</key>
+<array>
+  <string>56434KSQ43.*</string>
+</array>]]></Entitlements>
     </iPhone>
-
-    <android>
-        <manifestAdditions><![CDATA[
-            <manifest android:installLocation="auto" >
-                <uses-sdk android:minSdkVersion="16" android:targetSdkVersion="29" />
-
-                <uses-permission android:name="android.permission.INTERNET"/>
-                <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-                <application android:hardwareAccelerated="true">
-
-                    <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
-
-
-                    <activity
-                        android:name="com.ironsource.sdk.controller.ControllerActivity"
-                        android:configChanges="orientation|screenSize"
-                        android:hardwareAccelerated="true" />
-                    <activity
-                        android:name="com.ironsource.sdk.controller.InterstitialActivity"
-                        android:configChanges="orientation|screenSize"
-                        android:hardwareAccelerated="true"
-                        android:theme="@android:style/Theme.Translucent" />
-                    <activity
-                        android:name="com.ironsource.sdk.controller.OpenUrlActivity"
-                        android:configChanges="orientation|screenSize"
-                        android:hardwareAccelerated="true"
-                        android:theme="@android:style/Theme.Translucent" />
-                    <provider
-                        android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
-                        android:authorities="air.com.distriqt.test.IronsourceLifecycleProvider" />
-
-
-                </application>
-
-            </manifest>
-        ]]></manifestAdditions>
-    </android>
-
     <extensions>
+        <extensionID>androidx.appcompat</extensionID>
+        <extensionID>androidx.browser</extensionID>
+        <extensionID>androidx.cardview</extensionID>
+        <extensionID>androidx.constraintlayout</extensionID>
+        <extensionID>androidx.core</extensionID>
+        <extensionID>androidx.emoji2</extensionID>
+        <extensionID>androidx.exifinterface</extensionID>
+        <extensionID>androidx.room</extensionID>
+        <extensionID>androidx.vectordrawable</extensionID>
+        <extensionID>androidx.work</extensionID>
+        <extensionID>com.android.installreferrer</extensionID>
+        <extensionID>com.bumptech.glide</extensionID>
+        <extensionID>com.distriqt.AppleSignIn</extensionID>
+        <extensionID>com.distriqt.Application</extensionID>
+        <extensionID>com.distriqt.ApplicationRater</extensionID>
+        <extensionID>com.distriqt.Bolts</extensionID>
         <extensionID>com.distriqt.Core</extensionID>
+        <extensionID>com.distriqt.Debug</extensionID>
+        <extensionID>com.distriqt.Dialog</extensionID>
+        <extensionID>com.distriqt.Exceptions</extensionID>
+        <extensionID>com.distriqt.Firebase</extensionID>
+        <extensionID>com.distriqt.IDFA</extensionID>
+        <extensionID>com.distriqt.InAppBilling</extensionID>
         <extensionID>com.distriqt.IronSource</extensionID>
-
-        <extensionID>com.distriqt.playservices.Base</extensionID>
+        <extensionID>com.distriqt.NativeWebView</extensionID>
+        <extensionID>com.distriqt.NetworkInfo</extensionID>
+        <extensionID>com.distriqt.Notifications</extensionID>
+        <extensionID>com.distriqt.PushNotifications</extensionID>
+        <extensionID>com.distriqt.RootChecker</extensionID>
+        <extensionID>com.distriqt.Share</extensionID>
+        <extensionID>com.distriqt.facebook.Core</extensionID>
+        <extensionID>com.distriqt.facebook.Login</extensionID>
+        <extensionID>com.distriqt.facebook.Share</extensionID>
+        <extensionID>com.distriqt.firebase.Crashlytics</extensionID>
+        <extensionID>com.distriqt.firebase.RemoteConfig</extensionID>
+        <extensionID>com.distriqt.ironsource.AdMob</extensionID>
+        <extensionID>com.distriqt.ironsource.AppLovin</extensionID>
+        <extensionID>com.distriqt.ironsource.FacebookAudience</extensionID>
         <extensionID>com.distriqt.playservices.Ads</extensionID>
         <extensionID>com.distriqt.playservices.AdsIdentifier</extensionID>
-
-        <extensionID>androidx.core</extensionID>
+        <extensionID>com.distriqt.playservices.AppSet</extensionID>
+        <extensionID>com.distriqt.playservices.Base</extensionID>
+        <extensionID>com.distriqt.playservices.CloudMessaging</extensionID>
+        <extensionID>com.distriqt.square.okhttp</extensionID>
+        <extensionID>com.distriqt.square.okhttp3</extensionID>
+        <extensionID>com.google.android.datatransport</extensionID>
+        <extensionID>com.google.android.play</extensionID>
+        <extensionID>com.google.code.gson</extensionID>
+        <extensionID>com.google.dagger</extensionID>
+        <extensionID>com.google.firebase.core</extensionID>
+        <extensionID>com.google.firebase.messaging</extensionID>
+        <extensionID>com.google.guava</extensionID>
+        <extensionID>com.google.protobuflite</extensionID>
         <extensionID>com.jetbrains.kotlin</extensionID>
+        <extensionID>io.grpc</extensionID>
+        <extensionID>io.reactivex</extensionID>
     </extensions>
 
 </application>

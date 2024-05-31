@@ -108,9 +108,6 @@ package com.distriqt.test.ironsource
 			addAction( "Hide :Banner", _tests.hideBanner );
 			addAction( "Destroy :Banner", _tests.destroyBanner );
 			
-			addAction( "Show :Offerwall", _tests.showOfferwall );
-			addAction( "Get Credits :Offerwall", _tests.getOfferwallCredits );
-			
 			addChild( _tests );
 			addChild( _text );
 			addChild( _container );

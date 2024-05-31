@@ -1,0 +1,180 @@
+{
+    "identifier": "com.sboiko.christmassweeper3",
+    "name": "CS3 B",
+    "filename": "CS3B",
+    "version": "10.7.1",
+    "versionLabel": "",
+    "platforms": [],
+    "dependencies": [
+        {
+            "version": "2.3.0",
+            "id": "com.distriqt.AppleSignIn"
+        },
+        {
+            "version": "7.1.0",
+            "id": "com.distriqt.Application"
+        },
+        {
+            "version": "6.4.2",
+            "id": "com.distriqt.ApplicationRater"
+        },
+        {
+            "version": "3.2.1",
+            "id": "com.distriqt.Debug"
+        },
+        {
+            "version": "8.8.0",
+            "id": "com.distriqt.Dialog"
+        },
+        {
+            "version": "3.1.0",
+            "id": "com.distriqt.Exceptions"
+        },
+        {
+            "version": "17.0.0",
+            "id": "com.distriqt.facebook.Core"
+        },
+        {
+            "version": "17.0.0",
+            "id": "com.distriqt.facebook.Login"
+        },
+        {
+            "version": "17.0.0",
+            "id": "com.distriqt.facebook.Share"
+        },
+        {
+            "version": "9.0.0",
+            "id": "com.distriqt.Firebase"
+        },
+        {
+            "version": "9.0.0",
+            "id": "com.distriqt.firebase.Crashlytics"
+        },
+        {
+            "version": "9.0.0",
+            "id": "com.distriqt.firebase.RemoteConfig"
+        },
+        {
+            "version": "5.2.0",
+            "id": "com.distriqt.IDFA"
+        },
+        {
+            "version": "15.4.0",
+            "id": "com.distriqt.InAppBilling"
+        },
+        {
+            "version": "4.0.1",
+            "id": "com.distriqt.IronSource"
+        },
+        {
+            "version": "2.1.0",
+            "id": "com.distriqt.ironsource.AdMob"
+        },
+        {
+            "version": "12.3.100",
+            "id": "com.distriqt.ironsource.AppLovin"
+        },
+        {
+            "version": "6.16.2",
+            "id": "com.distriqt.ironsource.FacebookAudience"
+        },
+        {
+            "version": "4.8.0",
+            "id": "com.distriqt.MediaPlayer"
+        },
+        {
+            "version": "4.1.0",
+            "id": "com.distriqt.NetworkInfo"
+        },
+        {
+            "version": "6.7.0",
+            "id": "com.distriqt.Notifications"
+        },
+        {
+            "version": "15.0.1",
+            "id": "com.distriqt.PushNotifications-FCM"
+        },
+        {
+            "version": "1.1.0",
+            "id": "com.distriqt.RootChecker"
+        },
+        {
+            "version": "7.6.0",
+            "id": "com.distriqt.Share"
+        }
+    ],
+    "configuration": {
+        "adMobAndroidApplicationId": {
+            "name": "adMobAndroidApplicationId",
+            "required": "true",
+            "value": "ca-app-pub-4216099470194209~8145722269"
+        },
+        "adMobIOSApplicationId": {
+            "name": "adMobIOSApplicationId",
+            "required": "true",
+            "value": "ca-app-pub-4216099470194209~4523531865"
+        },
+        "apsEnvironment": {
+            "name": "apsEnvironment",
+            "required": "true",
+            "value": "development"
+        },
+        "bundleSeedId": {
+            "name": "bundleSeedId",
+            "required": "true",
+            "value": "56434KSQ43"
+        },
+        "facebookAdvertiserIDCollectionEnabled": {
+            "name": "facebookAdvertiserIDCollectionEnabled",
+            "required": "false",
+            "value": "true"
+        },
+        "facebookAppId": {
+            "name": "facebookAppId",
+            "required": "true",
+            "value": "3440899555990537"
+        },
+        "facebookAutoInitEnabled": {
+            "name": "facebookAutoInitEnabled",
+            "required": "false",
+            "value": "false"
+        },
+        "facebookAutoLogAppEventsEnabled": {
+            "name": "facebookAutoLogAppEventsEnabled",
+            "required": "false",
+            "value": "true"
+        },
+        "facebookClientToken": {
+            "name": "facebookClientToken",
+            "required": "true",
+            "value": "9e0ecfdbbe0d9ef99a5df0c54aea7857"
+        },
+        "facebookDisplayName": {
+            "name": "facebookDisplayName",
+            "required": "true",
+            "value": "ChristmasSweeper3"
+        },
+        "getTaskAllow": {
+            "name": "getTaskAllow",
+            "required": "true",
+            "value": "true"
+        },
+        "photoLibraryAddUsageDescription": {
+            "name": "photoLibraryAddUsageDescription",
+            "required": "true",
+            "value": "Access to photo library is required to save images and videos."
+        },
+        "photoLibraryUsageDescription": {
+            "name": "photoLibraryUsageDescription",
+            "required": "true",
+            "value": "Access to photo library is required to save images and videos."
+        },
+        "userTrackingUsageDescription": {
+            "name": "userTrackingUsageDescription",
+            "required": "true",
+            "value": "Allows us to deliver personalized ads for you."
+        }
+    },
+    "repositories": [],
+    "deployOptions": {}
+}
